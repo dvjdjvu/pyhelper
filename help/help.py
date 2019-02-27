@@ -4,6 +4,13 @@
 import sys
 import inspect
 
+from .date.date import date
+from .proc.proc import proc
+from .string.string import string
+from .type.type import type
+from .log.log import log
+
+
 def getDigit(number, n):
     """
     Взять n-ю цифру из N-значного числа.
