@@ -10,7 +10,7 @@ install:
 
 clean:
 	rm -rf build
-	rm -rf help.egg*
+	rm -rf helper.egg*
 	rm -rf dist
 	rm -rf helper-*
 	
