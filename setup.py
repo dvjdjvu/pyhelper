@@ -3,8 +3,8 @@
 
 from setuptools import setup, find_packages
 
-PACKAGE = "help"
-NAME = "help"
+PACKAGE = "helper"
+NAME = "helper"
 DESCRIPTION = "Library help for python"
 AUTHOR = "dvjdvju"
 AUTHOR_EMAIL = "djvu@inbox.ru"

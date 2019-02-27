@@ -4,12 +4,13 @@ auto:
 install:
 	tar -xzf dist/*.tar.gz
 	
-	sudo python3 help-*/setup.py install
+	sudo python3 helper-*/setup.py install
 
-	rm -r help-*
+	sudo rm -rf helper-*
 
 clean:
 	rm -rf build
 	rm -rf help.egg*
 	rm -rf dist
+	rm -rf helper-*
 	
