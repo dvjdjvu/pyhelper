@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 #encoding: UTF-8
 
+import os
 from ctypes import cdll, byref, create_string_buffer
 
 def setName(newName):
@@ -30,3 +31,6 @@ def getName():
     libc.prctl(16, byref(buff), 0, 0, 0)
     
     return buff.value.decode("utf-8")
+
+def shutdown(signum, frame):
+    os._exit(1)
