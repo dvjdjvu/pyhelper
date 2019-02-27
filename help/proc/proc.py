@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.2
+#!/usr/bin/env python3
 #encoding: UTF-8
 
 from ctypes import cdll, byref, create_string_buffer
