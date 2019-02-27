@@ -1,0 +1,6 @@
+Package: helper
+Version: 1.0.0
+Section: libs
+Architecture: all
+Maintainer: Sergeev Dmitry <djvu@inbox.ru>
+Description: Python 3 package for help.

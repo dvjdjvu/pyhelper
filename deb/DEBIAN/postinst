@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /tmp
+
+tar xvzf `ls /tmp | grep helper.*.tar.gz | tail -1`
+cd /tmp/helper-*.*/
+
+python3 setup.py install
+
+rm -rf /tmp/helper*
+
+exit 0
