@@ -2,6 +2,7 @@
 #encoding: UTF-8
 
 import datetime
+from helper.proc import proc
 
 DEBUG_LEVEL = ''
 
@@ -54,7 +55,7 @@ def Print(*args) :
     for arg in args :
         objs += str(arg) + ' '
     
-    objs = get_proc_name() + ':[' + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + ']' + str(objs)
+    objs = proc.getName() + ':[' + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + ']' + str(objs)
     
     if re.search(r'\[critical\]', objs) :
         objs = objs.replace('[critical]', '')
