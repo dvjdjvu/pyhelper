@@ -12,6 +12,10 @@ mkdir -p $PATH_DEB
 
 python3 setup.py sdist
 
-cp -r dist/*.tar.gz $PATH_DEB/
+if ! cp -r dist/*.tar.gz $PATH_DEB/ ;
+then
+    echo 'Before need use make.'
+    exit
+fi
 
 dpkg-deb --build $DEB $BUILD_DIR
