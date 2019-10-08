@@ -113,6 +113,33 @@ def str_eng_to_rus(string):
     string = string.replace("M", "М");
     #string = string.replace("b", "Ъ");
 
+    return string
+
+def str_rus_to_eng(string):
+    """
+    # Транслитерация символов.
+        
+    Args:
+        string:       (String) Строка.
+            
+    Returns:
+        String Транслитерированная строка.
+    """
+    
+    string = string.replace("Е", "E");
+    string = string.replace("Т", "T");
+    string = string.replace("У", "Y");
+    string = string.replace("О", "O");
+    string = string.replace("Р", "P");
+    string = string.replace("А", "A");
+    string = string.replace("Н", "H");
+    string = string.replace("К", "K");
+    string = string.replace("Х", "X");
+    string = string.replace("С", "C");
+    string = string.replace("В", "B");
+    string = string.replace("М", "M");
+    #string = string.replace("Ъ", "b");
+
     return string;
 
 def str_is_empty_ret_zero(_str) :
