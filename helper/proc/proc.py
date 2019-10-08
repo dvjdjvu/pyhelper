@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #encoding: UTF-8
 
-import os
+import os, signal
 from ctypes import cdll, byref, create_string_buffer
 
 def setName(newName):
@@ -33,4 +33,5 @@ def getName():
     return buff.value.decode("utf-8")
 
 def shutdown(signum, frame):
+    os.kill(0, signal.SIGTERM)
     os._exit(1)
