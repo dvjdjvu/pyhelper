@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-#encoding: UTF-8
+# encoding: UTF-8
 
 import datetime
+
 
 def is_int(s):
     """
@@ -13,17 +14,18 @@ def is_int(s):
     Returns:
         (Bool) True/False
     """
-    
-    if s == '' :
+
+    if s == '':
         return True
-    
+
     try:
         int(s)
         return True
     except Exception:
         return False
-    
+
     return False
+
 
 def is_float(s):
     """
@@ -35,17 +37,18 @@ def is_float(s):
     Returns:
         (Bool) True/False
     """
-    
-    if s == '' :
+
+    if s == '':
         return True
-    
+
     try:
         float(s)
         return True
     except Exception:
         return False
-    
+
     return False
+
 
 def is_date(date_text):
     """
@@ -61,12 +64,13 @@ def is_date(date_text):
         >>> is_date('1990-12-15')
         True
     """
-    
+
     try:
         datetime.datetime.strptime(date_text, '%Y-%m-%d')
         return True
     except Exception:
         return False
+
 
 def is_date(date_text, date_format):
     """
@@ -83,11 +87,10 @@ def is_date(date_text, date_format):
         >>> is_date('1990 12 15 15 59 22', '%Y %m %d %H %M %S')
         True
     """
-    
+
     try:
-        #dt = datetime.datetime.strptime(date_text, date_format)
+        # dt = datetime.datetime.strptime(date_text, date_format)
         dt = datetime.datetime(*(time.strptime(date_text, date_format)[0:6]))
         return True
     except Exception:
         return False
-    

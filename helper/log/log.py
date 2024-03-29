@@ -92,7 +92,7 @@ FLn = lambda: (str(sys._getframe(1).f_lineno), inspect.stack()[1][3] + "()")
 
 
 def tag(file_name: str, func_line_name: str, title: str = '') -> str:
-    try :
+    try:
         return title + file_name.split("/")[-1] + ":" + func_line_name[0] + ": " + func_line_name[1] + ":"
     except:
         return title + file_name.split("/")[-1] + ":" + func_line_name[0] + ": " + func_line_name[1] + ":"

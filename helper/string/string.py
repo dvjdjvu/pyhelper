@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#encoding: UTF-8
+# encoding: UTF-8
 
 def getLeft(s, amount):
     """
@@ -12,8 +12,9 @@ def getLeft(s, amount):
     Returns:
         String
     """
-    
+
     return s[:amount]
+
 
 def getRight(s, amount):
     """
@@ -26,8 +27,9 @@ def getRight(s, amount):
     Returns:
         String
     """
-    
+
     return s[-amount:]
+
 
 def getMid(s, offset, amount):
     """
@@ -41,8 +43,9 @@ def getMid(s, offset, amount):
     Returns:
         String
     """
-    
+
     return s[offset:offset + amount]
+
 
 def delLeft(s, amount):
     """
@@ -55,8 +58,9 @@ def delLeft(s, amount):
     Returns:
         String
     """
-    
+
     return s[amount:]
+
 
 def delRight(s, amount):
     """
@@ -69,8 +73,9 @@ def delRight(s, amount):
     Returns:
         String
     """
-    
+
     return s[:-amount]
+
 
 def delMid(s, offset, amount):
     """
@@ -84,7 +89,7 @@ def delMid(s, offset, amount):
     Returns:
         String
     """
-    
+
     return getRight(s, len(s) - offset) + getLeft(s, offset + amount)
 
 
@@ -98,7 +103,7 @@ def str_eng_to_rus(string):
     Returns:
         String Транслитерированная строка.
     """
-    
+
     string = string.replace("E", "Е");
     string = string.replace("T", "Т");
     string = string.replace("Y", "У");
@@ -111,9 +116,10 @@ def str_eng_to_rus(string):
     string = string.replace("C", "С");
     string = string.replace("B", "В");
     string = string.replace("M", "М");
-    #string = string.replace("b", "Ъ");
+    # string = string.replace("b", "Ъ");
 
     return string
+
 
 def str_rus_to_eng(string):
     """
@@ -125,7 +131,7 @@ def str_rus_to_eng(string):
     Returns:
         String Транслитерированная строка.
     """
-    
+
     string = string.replace("Е", "E");
     string = string.replace("Т", "T");
     string = string.replace("У", "Y");
@@ -138,11 +144,12 @@ def str_rus_to_eng(string):
     string = string.replace("С", "C");
     string = string.replace("В", "B");
     string = string.replace("М", "M");
-    #string = string.replace("Ъ", "b");
+    # string = string.replace("Ъ", "b");
 
     return string;
 
-def str_is_empty_ret_zero(_str) :
+
+def str_is_empty_ret_zero(_str):
     """
     Приведение '' к '0'.
         
@@ -152,13 +159,14 @@ def str_is_empty_ret_zero(_str) :
     Returns:
         (String) Возвращает '0' если _str == '', иначе _str.
     """
-    
-    if _str == '' :
+
+    if _str == '':
         return '0'
-    
+
     return _str
-    
-def set_delemiter(value, index, delemiter = ':') :
+
+
+def set_delemiter(value, index, delemiter=':'):
     """
     Установить символ разделителя в строку на указанную позицию. Символ на позиции будет заменен новым.
         
@@ -170,11 +178,12 @@ def set_delemiter(value, index, delemiter = ':') :
     Returns:
         (String) Новая строка.
     """
-    
-    value = value[:index] + delemiter + value[index+1:]
+
+    value = value[:index] + delemiter + value[index + 1:]
     return value
 
-def set_delemiter_save_val(value, index, delemiter = ':'):
+
+def set_delemiter_save_val(value, index, delemiter=':'):
     """
     Установить символ разделителя в строку между символами на указанной позиции.
         
@@ -186,9 +195,10 @@ def set_delemiter_save_val(value, index, delemiter = ':'):
     Returns:
         (String) Новая строка.
     """
-    
-    value = value[:index] + value[index] + delemiter + value[index+1:]
+
+    value = value[:index] + value[index] + delemiter + value[index + 1:]
     return value
+
 
 def getErrorStr(_error, _line, _str):
     """
@@ -202,7 +212,7 @@ def getErrorStr(_error, _line, _str):
     Returns:
         (String) Ошибка.
     """
-    
+
     _error = "[error]: Строка:" + str(_line) + " Ошибка: " + _error + ": \"" + _str + "\"\n"
-    
+
     return _error
