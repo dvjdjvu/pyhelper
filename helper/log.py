@@ -5,7 +5,7 @@ import re
 import sys
 import inspect
 import datetime
-from ..proc import proc
+from .proc import getName
 
 DEBUG_LEVEL = ''
 
@@ -58,7 +58,7 @@ def Print(*args):
     for arg in args:
         objs += str(arg) + ' '
 
-    objs = proc.getName() + ':[' + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + ']' + str(objs)
+    objs = getName() + ':[' + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + ']' + str(objs)
 
     if re.search(r'\[critical\]', objs):
         objs = objs.replace('[critical]', '')
