@@ -1,7 +1,7 @@
 Библиотека помощи.
 
 ```bash
-pip3 install git+https://github.com/dvjdjvu/pyhelper.git
+pip3 install -I git+https://github.com/dvjdjvu/pyhelper.git
 ```
 
 ```bash
