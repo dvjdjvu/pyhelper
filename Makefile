@@ -13,4 +13,8 @@ clean:
 	rm -rf helper.egg*
 	rm -rf dist
 	rm -rf helper-*
+
+build:
+	sudo pip3 install wheel
+	python3 setup.py bdist_wheel
 	
