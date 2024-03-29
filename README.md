@@ -5,9 +5,9 @@ pip3 install -I git+https://github.com/dvjdjvu/pyhelper.git
 ```
 
 ```bash
-import helper.date.date
-import helper.log.log
-import helper.proc.proc
-import helper.string.string
-import helper.type.type
+import helper.date
+import helper.log
+import helper.proc
+import helper.string
+import helper.type
 ```
