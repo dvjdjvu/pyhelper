@@ -85,7 +85,7 @@ def delMid(s, offset, amount):
         String
     """
     
-    return right(s, len(s) - offset) + left(s, offset + amount)
+    return getRight(s, len(s) - offset) + getLeft(s, offset + amount)
 
 
 def str_eng_to_rus(string):

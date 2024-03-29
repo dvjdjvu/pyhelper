@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 #encoding: UTF-8
 
+import datetime
+
 def is_int(s):
     """
     # Проверка строки на int.
